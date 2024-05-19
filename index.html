@@ -152,6 +152,7 @@
                     contentType: 'application/json',
                     data: jsonData,
                     success: function (data) {
+                        data = JSON.parse(data);
                         console.log(data);
                         $('#gstInclusiveValue').text(data.gstInclusive ? 'Yes' : 'No');
                         $('#initialAmountValue').text(data.amount);
