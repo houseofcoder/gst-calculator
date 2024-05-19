@@ -128,18 +128,14 @@
                 $(this).find(':input').each(function () {
                     var input = $(this);
                     if (input.attr('name')) {
-                        if (input.attr('name') == "gstInclusive") {
-                            return;
-                        }
                         formData[input.attr('name')] = input.val();
-                        ///formData[input.attr('name')] = parseInt(input.val());
-                        // if(input.val() == "ON"){
-                        //     formData[input.attr('name')] = true;
-                        // }
-                        // else {
-
-                        // }
-
+                        if (input.attr('name') == "gstInclusive") {
+                            if (input.is(':checked')) {
+                                formData[input.attr('name')] = true;
+                            } else {
+                                formData[input.attr('name')] = false;
+                            }
+                        }
                     }
                 });
 
