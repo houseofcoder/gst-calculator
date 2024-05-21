@@ -151,10 +151,10 @@
                         // data = JSON.parse(data);
                         console.log(data);
                         $('#gstInclusiveValue').text(data.gstInclusive ? 'Yes' : 'No');
-                        $('#initialAmountValue').text(data.amount);
+                        $('#initialAmountValue').text((data.amount).toLocaleString('en-IN'));
                         $('#gstPercentValue').text(data.gstPercent + ' %');
-                        $('#netAmountValue').text(data.netAmount);
-                        $('#gstAmountValue').text(data.gstAmount);
+                        $('#netAmountValue').text((data.netAmount).toLocaleString('en-IN'));
+                        $('#gstAmountValue').text((data.gstAmount).toLocaleString('en-IN'));
                         $('#totalAmountValue').text((data.total).toLocaleString('en-IN'));
                         $('#resultTableWrapper').removeClass('d-none'); // Show the table on success
                     },
