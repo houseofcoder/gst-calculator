@@ -155,7 +155,7 @@
                         $('#gstPercentValue').text(data.gstPercent + ' %');
                         $('#netAmountValue').text(data.netAmount);
                         $('#gstAmountValue').text(data.gstAmount);
-                        $('#totalAmountValue').text(data.total).toLocaleString();
+                        $('#totalAmountValue').text((data.total).toLocaleString());
                         $('#resultTableWrapper').removeClass('d-none'); // Show the table on success
                     },
                     error: function (xhr, status, error) {
